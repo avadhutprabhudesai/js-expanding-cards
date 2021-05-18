@@ -1,0 +1,53 @@
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0.5;
+  border-radius: 5rem;
+  position: relative;
+  cursor: pointer;
+  transition: flex 0.4s;
+
+  &--1 {
+    background-image: url('https://source.unsplash.com/WLUHO9A_xik/1600x900');
+  }
+  &--2 {
+    background-image: url('https://source.unsplash.com/Fn4SxCkukJE/1600x900');
+  }
+  &--3 {
+    background-image: url('https://source.unsplash.com/oR0uERTVyD0/1600x900');
+  }
+  &--4 {
+    background-image: url('https://source.unsplash.com/21LYqbqre8w/1600x900');
+  }
+  &--5 {
+    background-image: url('https://source.unsplash.com/wVjoNpcTHxM/1600x900');
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-white;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
+  @media (max-width: 520px) {
+    height: 50vh;
+  }
+}
+
+.active {
+  flex: 5;
+
+  h3 {
+    opacity: 1;
+  }
+
+  @media (max-width: 520px) {
+    flex: 10;
+  }
+}
